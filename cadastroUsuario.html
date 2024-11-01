@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Usuário</h1>
+        <a href="index.html" class="button">Voltar para a Página Inicial</a>
+    </header>
+
+    <main>
+        <form id="formUsuario">
+            <label for="nomeUsuario">Nome:</label>
+            <input type="text" id="nomeUsuario" required>
+
+            <label for="cpfUsuario">CPF:</label>
+            <input type="text" id="cpfUsuario" required>
+
+            <label for="dataNascimentoUsuario">Data de Nascimento:</label>
+            <input type="date" id="dataNascimentoUsuario" required>
+
+            <label for="familiaresUsuario">Familiares (Contato):</label>
+            <input type="text" id="familiaresUsuario">
+
+            <label for="fotoUsuario">Foto:</label>
+            <input type="file" id="fotoUsuario" accept="image/*" onchange="previewUserImage(event)" style="display: none;">
+            <label for="fotoUsuario" class="button">Selecionar</label>
+
+            <img id="fotoPreview" src="" alt="Prévia da Foto" style="display: none; max-width: 200px; margin-top: 10px;">
+
+            <button type="submit">Cadastrar Usuário</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
